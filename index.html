@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mohammad Alvin Fajri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Sail&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/icon-tab.jpg" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span class="purple">p</span><span>ortofolio.</span>
+            </a>
+
+            <nav>
+                <a href="#home" class="active">Home</a>
+                <a href="#community">Community</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </nav>
+
+            <button class="signup-btn">
+                <span>Sign Up</span>
+                <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.75 6.75H3.25ZM16.75 6.75L10.75 0.75ZM16.75 6.75L10.75 12.75ZM16.75 6.75H6.25Z" fill="white"/>
+                    <path d="M0.75 6.75H3.25M16.75 6.75L10.75 0.75M16.75 6.75L10.75 12.75M16.75 6.75H6.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="home">
+        <div class="gradient-bg"></div>
+
+        <div class="grid-bg">
+            <svg preserveAspectRatio="none" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid-perspective" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                        <path d="M0,0 L200,100" stroke="#B3B3B3" stroke-width="0.5" opacity="0.2"/>
+                        <path d="M0,100 L200,0" stroke="#B3B3B3" stroke-width="0.5" opacity="0.2"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid-perspective)"/>
+            </svg>
+        </div>
+
+        <div class="content-container">
+            <div class="content-max">
+                <div class="badge">🍷 #1 porto website in my world</div>
+
+                <div class="tagline">
+                    <span class="tagline-regular">this is</span>
+                    <span class="tagline-highlight">porto</span>
+                    <span class="tagline-regular">website.</span>
+                </div>
+
+                <h1>
+                    Mohammad Alvin <span class="purple">Fajri</span>.
+                </h1>
+
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                </p>
+
+                <button class="get-started-btn">
+                    <span>Get Started</span>
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.75 6.75H3.25ZM16.75 6.75L10.75 0.75ZM16.75 6.75L10.75 12.75ZM16.75 6.75H6.25Z" fill="white"/>
+                        <path d="M0.75 6.75H3.25M16.75 6.75L10.75 0.75M16.75 6.75L10.75 12.75M16.75 6.75H6.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="spline-card-container">
+                <iframe src='https://my.spline.design/sleekidbadge-IAhvYcxMnoFsbokRfwnqmjvX/' frameborder='0' width='100%' height='100%'></iframe>
+            </div>
+
+        </div> 
+        
+        <div class="brand-carousel-wrapper">
+            <div class="brand-carousel">
+                <div class="brand-carousel-content">
+                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/7f92db777a5ba1a4b94092fc9c91764be1cea479?width=314" alt="Spotify" class="brand-item">
+                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/714717824886443cf6453f35611af4a5b25988de?width=306" alt="Slack" class="brand-item">
+                    <img src="https://api.builder.io/api/v1/image/assets/TEMP/cfb2fb12dfdff245fa72b2587956c90a206f554e?width=368" alt="Y Combinator" class="brand-item">
+                    <img src="httpsT://api.builder.io/api/v1/image/assets/TEMP/200f8ab4346f9cde2496992425c225483aefe0ef?width=426" alt="Discord" class="brand-item">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Simple navigation active state handler
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

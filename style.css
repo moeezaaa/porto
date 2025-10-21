@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    font-family: 'Outfit', -apple-system, Roboto, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo .purple {
+    color: #9D4EDD;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+nav a.active {
+    color: #9D4EDD;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.signup-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.signup-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.signup-btn svg {
+    width: 16px;
+    height: 12px;
+    stroke: #fff;
+    fill: #fff;
+}
+
+/* Main Content */
+main {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Gradient Blur Effect */
+.gradient-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background: #9D4EDD;
+    filter: blur(600px);
+    opacity: 0.5;
+    transform: translateX(33%);
+    pointer-events: none;
+}
+
+/* Grid Background */
+.grid-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.grid-bg svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Content Container */
+.content-container {
+    position: relative; /* Penting agar position:absolute di child berfungsi */
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    z-index: 10;
+}
+
+.content-max {
+    max-width: 56rem;
+}
+
+/* Badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(6px);
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: 2rem;
+}
+
+.tagline {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    line-height: 1.2;
+}
+
+.tagline-regular {
+    color: #fff;
+    font-size: clamp(1.5rem, 5vw, 2.875rem);
+    font-weight: 400;
+}
+
+.tagline-highlight {
+    color: #9D4EDD;
+    font-family: 'Sail', serif;
+    font-size: clamp(2.5rem, 10vw, 6rem);
+    font-weight: 400;
+}
+
+h1 {
+    color: #fff;
+    font-size: clamp(2rem, 6vw, 4.625rem);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+h1 .purple {
+    color: #9D4EDD;
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    max-width: 34rem;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.get-started-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: #9D4EDD;
+    border-radius: 50px;
+    color: #fff;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.get-started-btn:hover {
+    background: #8a3fbf;
+    transform: translateY(-2px);
+}
+
+.get-started-btn svg {
+    width: 16px;
+    height: 12px;
+    fill: #fff;
+    stroke: #fff;
+}
+
+/* Brand Carousel */
+.brand-carousel-wrapper {
+    position: relative;
+    margin-top: 3rem;
+    overflow: hidden;
+}
+
+.brand-carousel {
+    position: relative;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-6deg);
+    margin: 0 -10%;
+    width: 120%;
+}
+
+.brand-carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+}
+
+.brand-item {
+    height: 30px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.brand-item:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 1rem;
+        height: 80px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .signup-btn {
+        display: none;
+    }
+
+    .content-container {
+        padding: 2rem 1rem;
+    }
+
+    .brand-carousel-content {
+        gap: 1rem;
+    }
+
+    .brand-item {
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .content-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .badge {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .brand-carousel {
+        height: 70px;
+    }
+
+    .brand-carousel-content {
+        gap: 0.8rem;
+    }
+
+    .brand-item {
+        height: 20px;
+    }
+}
+
+/* Utility Classes */
+.text-purple {
+    color: #9D4EDD;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+#spline-card-container {
+    position: absolute;
+    z-index: 20; 
+    
+    /* Angka-angka ini disesuaikan dengan gambar Anda */
+    /* Anda bisa ubah lagi jika kurang pas */
+    width: 560px;  /* Lebar kartu 3D */
+    height: 480px; /* Tinggi kartu 3D (agar sejajar tombol) */
+    top: 40px;     /* Jarak dari atas (lebih tinggi dari teks) */
+    right: 50px;   /* Jarak dari kanan */
+    
+    border-radius: 16px;
+    overflow: hidden; 
+}
+
+/* CSS UNTUK RESPONSIF */
+@media (max-width: 1100px) {
+    #spline-card-container {
+        /* Sembunyikan kartu 3D di layar kecil */
+        display: none;
+    }
+}
